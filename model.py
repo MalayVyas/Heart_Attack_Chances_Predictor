@@ -44,7 +44,7 @@ def models_score(model_name, train_data, y_train, val_data, y_val):
         return round(score_MSE, 2), round(score_MAE, 2), round(score_r2score, 2)
 
 
-data = pd.read_csv("https://github.com/MalayVyas/Heart_Attack/blob/main/heart.csv")
+data = pd.read_csv("https://github.com/MalayVyas/Heart_Attack/blob/main/heart.csv", sep = ";")
 data_cleaned = data.drop("output", axis=1)
 y = data['output']
 # %%
