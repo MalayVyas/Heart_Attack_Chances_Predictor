@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import xgboost as xgb
 import numpy as np
-st.header("Fish Weight Prediction App")
+st.header("Heart Attack Prediction App")
 st.text_input("Enter your Name: ", key="name")
 data = pd.read_csv(r"https://github.com/MalayVyas/Heart_Attack/blob/main/heart.csv")
 # load label encoder
@@ -13,8 +13,7 @@ data = pd.read_csv(r"https://github.com/MalayVyas/Heart_Attack/blob/main/heart.c
 
 # load model
 best_xgboost_model = xgb.XGBRegressor()
-best_xgboost_model.load_model(
-    r"https://github.com/MalayVyas/Heart_Attack/blob/main/best_model.json")
+best_xgboost_model.load_model("best_model.json")
 
 if st.checkbox('Show Training Dataframe'):
     data
@@ -45,4 +44,3 @@ if st.button('Make Prediction'):
     print("final pred", np.squeeze(prediction, -1))
     st.write(f"Your fish Chances are: {np.squeeze(prediction, -1):.2f}g")
 
-    st.write(f"Thank you {st.session_state.name}! I hope you liked it.")
