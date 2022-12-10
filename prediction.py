@@ -27,7 +27,7 @@ label_encoder = LabelEncoder()
 # load model
 best_xgboost_model = xgb.XGBRegressor()
 best_xgboost_model.load_model(
-    r"D:\Coding\ML\Practice\Heart Attack\best_model.json")
+    r"https://github.com/MalayVyas/Heart_Attack/blob/main/best_model.json")
 pred = best_xgboost_model.predict(x_test)
 score_MSE, score_MAE, score_r2score = evauation_model(pred, y_test)
 print(score_MSE, score_MAE, score_r2score)
