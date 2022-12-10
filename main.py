@@ -21,7 +21,6 @@ if st.checkbox('Show Training Dataframe'):
 
 input_age = st.slider('age', 0, (max(data["age"])), 1)
 
-st.write("1: Male \n0: Female")
 
 input_sex = st.slider('sex', 0, (max(data["sex"])), 1)
 input_trtbps = st.slider('trtbps', 0, (max(data["trtbps"])), 1)
