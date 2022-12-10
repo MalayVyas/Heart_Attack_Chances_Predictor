@@ -13,7 +13,7 @@ def evauation_model(pred, y_val):
     return score_MSE, score_MAE, score_r2score
 
 
-data = pd.read_csv(r"D:\Coding\ML\Practice\Heart Attack\heart.csv")
+data = pd.read_csv(r"https://github.com/MalayVyas/Heart_Attack/blob/main/heart.csv")
 data_cleaned = data.drop("output", axis=1)
 y = data['output']
 x_train, x_test, y_train, y_test = train_test_split(
