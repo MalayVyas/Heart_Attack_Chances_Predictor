@@ -14,7 +14,7 @@ data = pd.read_csv(r"https://github.com/MalayVyas/Heart_Attack/blob/main/heart.c
 # load model
 best_xgboost_model = xgb.XGBRegressor()
 best_xgboost_model.load_model(
-    r"D:\Coding\ML\Practice\Heart Attack\best_model.json")
+    r"https://github.com/MalayVyas/Heart_Attack/blob/main/best_model.json")
 
 if st.checkbox('Show Training Dataframe'):
     data
