@@ -19,21 +19,21 @@ if st.checkbox('Show Training Dataframe'):
     data
 
 
-input_age = st.slider('Age', 0.0, float(max(data["age"])), 1.0)
+input_age = st.slider('age', 0, (max(data["age"])), 1)
 
 st.write("1: Male \n0: Female")
 
-input_sex = st.slider('sex', 0.0, float(max(data["sex"])), 1.0)
-input_trtbps = st.slider('trtbps', 0.0, float(max(data["trtbps"])), 1.0)
-input_chol = st.slider('Cholestrol', 0.0, float(max(data["chol"])), 1.0)
-input_fbs = st.slider('fbs', 0.0, float(max(data["fbs"])), 1.0)
-input_restecg = st.slider('restecg', 0.0, float(max(data["restecg"])), 1.0)
-input_thalachh = st.slider('thalachh', 0.0, float(max(data["thalachh"])), 1.0)
-input_exng = st.slider('exng', 0.0, float(max(data["exng"])), 1.0)
+input_sex = st.slider('sex', 0, (max(data["sex"])), 1)
+input_trtbps = st.slider('trtbps', 0, (max(data["trtbps"])), 1)
+input_chol = st.slider('Cholestrol', 0, (max(data["chol"])), 1)
+input_fbs = st.slider('fbs', 0, (max(data["fbs"])), 1)
+input_restecg = st.slider('restecg', 0, (max(data["restecg"])), 1)
+input_thalachh = st.slider('thalachh', 0, (max(data["thalachh"])), 1)
+input_exng = st.slider('exng', 0, (max(data["exng"])), 1)
 input_oldpeak = st.slider('oldpeak', 0.0, float(max(data["oldpeak"])), 1.0)
-input_slp = st.slider('slp', 0.0, float(max(data["slp"])), 1.0)
-input_caa = st.slider('caa', 0.0, float(max(data["caa"])), 1.0)
-input_thall = st.slider('thall', 0.0, float(max(data["thall"])), 1.0)
+input_slp = st.slider('slp', 0, (max(data["slp"])), 1)
+input_caa = st.slider('caa', 0, (max(data["caa"])), 1)
+input_thall = st.slider('thall', 0, (max(data["thall"])), 1)
 
 
 if st.button('Make Prediction'):
