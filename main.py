@@ -6,7 +6,7 @@ import xgboost as xgb
 import numpy as np
 st.header("Heart Attack Prediction App")
 st.text_input("Enter your Name: ", key="name")
-data = pd.read_csv("https://github.com/MalayVyas/Heart_Attack/blob/main/heart.csv", error_bad_false=False)
+data = pd.read_csv("https://github.com/MalayVyas/Heart_Attack/blob/main/heart.csv", error_bad_lines=False)
 # load label encoder
 # encoder = LabelEncoder()
 # encoder.classes_ = np.load('classes.npy', allow_pickle=True)
