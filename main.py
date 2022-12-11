@@ -22,7 +22,7 @@ if st.checkbox('Show Training Dataframe'):
 input_age = st.slider('age', 0, 100, 1)
 input_sex = st.slider('sex', 0, 1, 1)
 input_trtbps = st.slider('trtbps', 0, 300, 1)
-input_chol = st.slider('Cholestrol', 0,, 1)
+input_chol = st.slider('Cholestrol', 0,400, 1)
 input_fbs = st.slider('fbs', 0, 300, 1)
 input_restecg = st.slider('restecg', 0, 200, 1)
 input_thalachh = st.slider('thalachh', 0, 300, 1)
