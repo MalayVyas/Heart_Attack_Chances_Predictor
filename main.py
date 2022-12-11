@@ -24,6 +24,7 @@ input_age = st.slider('Age', 0.0, float(max(data["age"])), 1.0)
 st.write("1: Male \n0: Female")
 
 input_sex = st.slider('sex', 0.0, float(max(data["sex"])), 1.0)
+input_cp = st.slider('CP', 0.0, float(max(data["cp"])), 1.0)
 input_trtbps = st.slider('trtbps', 0.0, float(max(data["trtbps"])), 1.0)
 input_chol = st.slider('Cholestrol', 0.0, float(max(data["chol"])), 1.0)
 input_fbs = st.slider('fbs', 0.0, float(max(data["fbs"])), 1.0)
@@ -40,7 +41,7 @@ input_thall = st.slider('thall', 0.0, float(max(data["thall"])), 1.0)
 if st.button('Make Prediction'):
     # input_species = encoder.transform(np.expand_dims(inp_species, -1))
     inputs = np.expand_dims(
-        [input_age, input_sex, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thall], 0)
+        [input_age, input_sex, input_cp, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thall], 0)
     prediction = best_xgboost_model.predict(inputs)
     print("final pred", np.squeeze(prediction, -1))
     st.write(f"Your fish Chances are: {np.squeeze(prediction, -1):.2f}g")
