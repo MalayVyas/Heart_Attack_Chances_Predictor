@@ -6,7 +6,7 @@ import xgboost as xgb
 import numpy as np
 st.header("Heart Attack Prediction App")
 st.text_input("Enter your Name: ", key="name")
-data = pd.read_csv("https://github.com/MalayVyas/Heart_Attack/blob/main/heart.csv", error_bad_lines=False)
+data = pd.read_csv("https://github.com/MalayVyas/Heart_Attack/blob/main/heart.csv")
 # load label encoder
 # encoder = LabelEncoder()
 # encoder.classes_ = np.load('classes.npy', allow_pickle=True)
@@ -20,17 +20,17 @@ if st.checkbox('Show Training Dataframe'):
 
 
 input_age = st.slider('age', 0, 100, 1)
-input_sex = st.slider('sex', 0, (max(data["sex"])), 1)
-input_trtbps = st.slider('trtbps', 0, (max(data["trtbps"])), 1)
-input_chol = st.slider('Cholestrol', 0, (max(data["chol"])), 1)
-input_fbs = st.slider('fbs', 0, (max(data["fbs"])), 1)
-input_restecg = st.slider('restecg', 0, (max(data["restecg"])), 1)
-input_thalachh = st.slider('thalachh', 0, (max(data["thalachh"])), 1)
-input_exng = st.slider('exng', 0, (max(data["exng"])), 1)
-input_oldpeak = st.slider('oldpeak', 0.0, float(max(data["oldpeak"])), 1.0)
-input_slp = st.slider('slp', 0, (max(data["slp"])), 1)
-input_caa = st.slider('caa', 0, (max(data["caa"])), 1)
-input_thall = st.slider('thall', 0, (max(data["thall"])), 1)
+input_sex = st.slider('sex', 0, 1, 1)
+input_trtbps = st.slider('trtbps', 0, 300, 1)
+input_chol = st.slider('Cholestrol', 0,, 1)
+input_fbs = st.slider('fbs', 0, 300, 1)
+input_restecg = st.slider('restecg', 0, 200, 1)
+input_thalachh = st.slider('thalachh', 0, 300, 1)
+# input_exng = st.slider('exng', 0, (max(data["exng"])), 1)
+# input_oldpeak = st.slider('oldpeak', 0.0, float(max(data["oldpeak"])), 1.0)
+# input_slp = st.slider('slp', 0, (max(data["slp"])), 1)
+# input_caa = st.slider('caa', 0, (max(data["caa"])), 1)
+# input_thall = st.slider('thall', 0, (max(data["thall"])), 1)
 
 
 if st.button('Make Prediction'):
