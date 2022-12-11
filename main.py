@@ -44,5 +44,5 @@ if st.button('Make Prediction'):
         [input_age, input_sex, input_cp, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thall], 0)
     prediction = best_xgboost_model.predict(inputs)
     print("final pred", np.squeeze(prediction, -1))
-    st.write(f"Your fish Chances are: {np.squeeze(prediction, -1):.2f}g")
+    st.write(f"Your Heart Attack Chances are: {np.squeeze(prediction, -1):.2f}")
 
