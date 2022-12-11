@@ -23,7 +23,7 @@ input_age = st.slider('Age', 0.0, float(max(data["age"])), 1.0)
 
 st.write("1: Male \n0: Female")
 
-input_sex = st.slider('sex', 0.0, float(max(data["sex"])), 1.0)
+input_sex = st.slider('sex', 0, int(max(data["sex"])), 1)
 input_cp = st.slider('CP', 0.0, float(max(data["cp"])), 1.0)
 input_trtbps = st.slider('trtbps', 0.0, float(max(data["trtbps"])), 1.0)
 input_chol = st.slider('Cholestrol', 0.0, float(max(data["chol"])), 1.0)
