@@ -19,7 +19,7 @@ if st.checkbox('Show Training Dataframe'):
     data
 
 
-input_age = st.slider('age', 0, (max(data["age"])), 1)
+input_age = st.slider('age', 0, 100, 1)
 input_sex = st.slider('sex', 0, (max(data["sex"])), 1)
 input_trtbps = st.slider('trtbps', 0, (max(data["trtbps"])), 1)
 input_chol = st.slider('Cholestrol', 0, (max(data["chol"])), 1)
