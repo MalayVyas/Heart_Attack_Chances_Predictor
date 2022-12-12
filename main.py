@@ -19,7 +19,7 @@ if st.checkbox('Show Training Dataframe'):
     data
 
 
-input_age = st.slider('Age', 0.0, float(max(data["age"])), 1.0)
+input_age = st.slider('Age', 0, int(max(data["age"])), 1)
 
 st.write("1: Male")
 st.write("0: Female");
