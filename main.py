@@ -25,11 +25,21 @@ st.write("1: Male")
 st.write("0: Female");
 
 input_sex = st.slider('sex', 0, int(max(data["sex"])), 1)
+st.write("cp : Chest Pain type chest pain type
+    Value 1: typical angina
+    Value 2: atypical angina
+    Value 3: non-anginal pain
+    Value 4: asymptomatic")
 input_cp = st.slider('CP', 0, int(max(data["cp"])), 1)
+st.write("trtbps : resting blood pressure (in mm Hg)")
 input_trtbps = st.slider('trtbps', 0, int(max(data["trtbps"])), 1)
+st.write("chol : cholestoral in mg/dl fetched via BMI sensor")
 input_chol = st.slider('Cholestrol', 0, int(max(data["chol"])), 1)
+st.write("fbs : (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)")
 input_fbs = st.slider('fbs', 0, int(max(data["fbs"])), 1)
+st.write("rest_ecg : resting electrocardiographic results")
 input_restecg = st.slider('restecg', 0, int(max(data["restecg"])), 1)
+st.write("thalach : maximum heart rate achieved")
 input_thalachh = st.slider('thalachh', 0, int(max(data["thalachh"])), 1)
 input_exng = st.slider('exng', 0, int(max(data["exng"])), 1)
 input_oldpeak = st.slider('oldpeak', 0.0, float(max(data["oldpeak"])), 1.0)
