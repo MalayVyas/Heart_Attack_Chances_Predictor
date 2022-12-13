@@ -25,11 +25,11 @@ st.write("1: Male")
 st.write("0: Female");
 
 input_sex = st.slider('sex', 0, int(max(data["sex"])), 1)
-st.write("cp : Chest Pain type chest pain type
-    Value 1: typical angina
-    Value 2: atypical angina
-    Value 3: non-anginal pain
-    Value 4: asymptomatic")
+st.write("cp : Chest Pain type chest pain type:")
+st.write("Value 1: typical angina")
+st.write("Value 2: atypical angina")
+st.write("Value 3: non-anginal pain")
+st.write("Value 4: asymptomatic")
 input_cp = st.slider('CP', 0, int(max(data["cp"])), 1)
 st.write("trtbps : resting blood pressure (in mm Hg)")
 input_trtbps = st.slider('trtbps', 0, int(max(data["trtbps"])), 1)
