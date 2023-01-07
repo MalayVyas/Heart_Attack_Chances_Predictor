@@ -5,12 +5,14 @@ from sklearn.preprocessing import LabelEncoder
 import xgboost as xgb
 import numpy as np
 st.header("Heart Attack Prediction App")
+
+st.write("This app is currently under maintenance, please try later")
+
 st.text_input("Enter your Name: ", key="name")
 data = pd.read_csv("heart.csv",sep=",")
 # load label encoder
 # encoder = LabelEncoder()
 # encoder.classes_ = np.load('classes.npy', allow_pickle=True)
-st.write("This app is currently under maintenance, please try later")
 # load model
 best_xgboost_model = xgb.XGBRegressor()
 best_xgboost_model.load_model("best_model.json")
