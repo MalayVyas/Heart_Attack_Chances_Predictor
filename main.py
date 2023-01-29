@@ -30,10 +30,10 @@ input_slp = st.slider('slp', 0.0, float(max(data["slp"])), 1.0)
 input_caa = st.slider('caa', 0.0, float(max(data["caa"])), 1.0)
 input_thall = st.slider('thall', 0.0, float(max(data["thall"])), 1.0)
 
-
+prediction=0
 if st.button('Make Prediction'):
     inputs = np.expand_dims(
         [input_age, input_sex, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thall], 0)
     prediction = loaded_model.predict(inputs)
     print("final pred", np.squeeze(prediction, -1))
-    st.write(f"Your Heart Attack chancesare: {np.squeeze(prediction, -1):.2f}")
+    st.write("Your chances are " + str(prediction*100) + "%")
