@@ -45,7 +45,7 @@ input_oldpeak = st.slider('oldpeak', 0.0, float(max(data["oldpeak"])), 1.0)
 input_slp = st.slider('slp', 0, (max(data["slp"])), 1)
 input_caa = st.number_input(label="CAA", min_value=0, max_value=5)
 st.write("Person's maximum Heart rate Level acheived:")
-input_thalachh = st.number_input(label="Heart Rate Level"min_value=0, max_value=3)
+input_thalachh = st.number_input(label="Heart Rate Level",min_value=0, max_value=3)
 
 
 if st.button('Make Prediction'):
