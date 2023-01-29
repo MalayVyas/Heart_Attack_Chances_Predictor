@@ -32,8 +32,9 @@ input_thall = st.slider('thall', 0.0, float(max(data["thall"])), 1.0)
 
 prediction=0
 if st.button('Make Prediction'):
-    inputs = np.expand_dims(
-        [input_age, input_sex, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thall], 0)
+    #inputs = np.expand_dims(
+        #[input_age, input_sex, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thall], 0)
+    inputs = np.expand_dims([40,1,0,500,500,0,0,500,1,2,1,0,3],0)
     prediction = loaded_model.predict(inputs)
     print("final pred", np.squeeze(prediction, -1))
     st.write("Your chances are " + str(prediction*100) + "%")
