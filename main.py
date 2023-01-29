@@ -5,7 +5,7 @@ import numpy as np
 from tensorflow.keras.models import model_from_json
 st.header("Heart Attack Prediction App")
 name = st.text_input("Enter your Name: ", key="name")
-data = pd.read_csv(r"D:\Coding\ML\Practice\Heart Attack\heart.csv")
+data = pd.read_csv(r"heart.csv")
 
 json_file = open('model.json', 'r')
 loaded_model_json = json_file.read()
