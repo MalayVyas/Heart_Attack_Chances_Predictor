@@ -1,3 +1,5 @@
 numpy==1.20.1
 streamlit==0.76.0
-tensorflow
+tensorflow==2.11.0
+pandas
+
