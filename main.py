@@ -26,7 +26,7 @@ input_trtbps = st.slider('trtbps', 0, (max(data["trtbps"])), 1)
 input_chol = st.number_input(label="Cholestrol", min_value=0, max_value=400)
 st.write("Fasting Blood Sugar")
 input_fbs = 0
-if st.checkbox(label="Yes"):
+if st.checkbox(label="Yes, There is a Fasting Sugar problem."):
     input_fbs = 1
 else:
     input_fbs = 0
