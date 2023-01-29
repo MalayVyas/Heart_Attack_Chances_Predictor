@@ -28,32 +28,29 @@ st.write("Fasting Blood Sugar")
 input_fbs = 0
 if st.checkbox(label="Yes, There is a Fasting Sugar problem."):
     input_fbs = 1
-else:
-    input_fbs = 0
+
 st.write("RestECG")
 input_restecg = 0
-if st.checkbox(label="Yes"):
+if st.checkbox(label="Yes, There is an abnormailty in the ECG"):
     input_restecg = 1
-# else:
-#     input_restecg = 0
+
 
 input_thalachh = st.slider('thalachh', 0, (max(data["thalachh"])), 1)
-st.write("EXNG")
+st.write("EXANG")
 input_exng = 0
-if st.checkbox(label="Yes"):
+if st.checkbox(label="Yes, There is Exercise Induced Angina"):
     input_exng = 1
-else:
-    input_exng = 0
-
+    
 input_oldpeak = st.slider('oldpeak', 0.0, float(max(data["oldpeak"])), 1.0)
 input_slp = st.slider('slp', 0, (max(data["slp"])), 1)
 input_caa = st.number_input(label="CAA", min_value=0, max_value=5)
+st.write("Person's maximum Heart rate Acheived:")
 input_thalachh = st.number_input(label="Thalachh", min_value=0, max_value=3)
 
 
 if st.button('Make Prediction'):
     inputs = np.expand_dims(
-        [input_age, input_sex, input_cp, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thall], 0)
+        [input_age, input_sex, input_cp, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thall], 0).astype(np.float)
     prediction = loaded_model.predict(inputs)
     print("final pred", np.squeeze(prediction, -1))
     st.write(f"Your Heart Attack chancesare: {np.squeeze(prediction, -1):.2f}")
