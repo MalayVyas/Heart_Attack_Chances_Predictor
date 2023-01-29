@@ -34,8 +34,8 @@ st.write("RestECG")
 input_restecg = 0
 if st.checkbox(label="Yes"):
     input_restecg = 1
-else:
-    input_restecg = 0
+# else:
+#     input_restecg = 0
 
 input_thalachh = st.slider('thalachh', 0, (max(data["thalachh"])), 1)
 st.write("EXNG")
