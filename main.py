@@ -49,8 +49,9 @@ input_thalachh = st.number_input(label="Heart Rate Level",min_value=0, max_value
 
 
 if st.button('Make Prediction'):
-    inputs = np.expand_dims(
-        [input_age, input_sex, input_cp, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thalachh], 0).astype(np.float)
-    prediction = loaded_model.predict(inputs)
-    print("final pred", np.squeeze(prediction, -1))
-    st.write(f"Your Heart Attack chancesare: {np.round(prediction[0][0]*100,2)}%")
+  st.write("This app is currently under maintainenece, Sorry for the inconvenience")
+    # inputs = np.expand_dims(
+    #     [input_age, input_sex, input_cp, input_trtbps, input_chol, input_fbs, input_restecg, input_thalachh, input_exng, input_oldpeak, input_slp, input_caa, input_thalachh], 0).astype(np.float)
+    # prediction = loaded_model.predict(inputs)
+    # print("final pred", np.squeeze(prediction, -1))
+    # st.write(f"Your Heart Attack chancesare: {np.round(prediction[0][0]*100,2)}%")
